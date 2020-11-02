@@ -1,0 +1,56 @@
+drop database biblioteca;
+CREATE DATABASE IF NOT EXISTS biblioteca;
+USE biblioteca;
+
+
+CREATE TABLE maxtabla(
+id_tabla int(10) not null,
+id_clave int(10) not null,
+maximo   int(20) not null,
+
+CONSTRAINT pk_maxtabla PRIMARY KEY(id_tabla, id_clave)
+)ENGINE=InnoDB;
+
+
+CREATE TABLE elemento(
+id_elemento int(10) not null,
+tipo                    varchar(2) not null,
+isbn                   varchar(20) not null,
+titulo           varchar(100) not null,
+autor                   varchar(100) not null,
+limite                  int(20),
+volumenes         int(20),
+fecha_publi date,
+CONSTRAINT pk_elemento PRIMARY KEY(id_elemento)
+)ENGINE=InnoDB;
+
+
+CREATE TABLE usuario(
+id_usuario int(10) not null,
+nombre                  varchar(100) not null,
+apellidos         varchar(100) not null,
+pass             varchar(10) not null,
+email                   varchar(100) not null,
+CONSTRAINT pk_usuario PRIMARY KEY(id_usuario)
+)ENGINE=InnoDB;
+
+
+CREATE TABLE copia(
+id_elemento  int(10) not null,  
+num_copia    int(10) not null, 
+prestable   boolean,
+CONSTRAINT pk_copia PRIMARY KEY(id_elemento, num_copia),
+CONSTRAINT fk_elemento FOREIGN KEY(id_elemento) REFERENCES elemento(id_elemento)
+)ENGINE=InnoDB;
+
+
+CREATE TABLE prestamo(
+id_usuario   int(10) not null,  
+id_elemento  int(10) not null,  
+num_copia    int(10) not null,
+num_prestamos int(10) not null,
+fecha_entrega date,
+CONSTRAINT pk_prestamo PRIMARY KEY(id_usuario, id_elemento, num_copia),
+CONSTRAINT fk_copia FOREIGN KEY(id_elemento, num_copia) REFERENCES copia(id_elemento, num_copia),
+CONSTRAINT fk_usuario FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
+)ENGINE=InnoDB;

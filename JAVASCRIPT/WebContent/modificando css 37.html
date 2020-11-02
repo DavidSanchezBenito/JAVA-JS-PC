@@ -1,0 +1,103 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style>
+
+h1{
+	text-align:center;
+}
+
+div{
+	width:20%;
+	margin:0 100px;
+	float:left;
+	border:#F00 solid 2px;
+	padding:10px;
+}
+
+table{
+	width:100%;
+	margin-top:10px;
+}
+
+
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+
+<script>
+$(document).ready(function(){ //ponemos los botones a la escucha
+	
+/*document.getElementById("aumenta1").addEventListener("click", aumentar,"false");
+document.getElementById("disminuye1").addEventListener("click", disminuye,"false");
+document.getElementById("aumenta2").addEventListener("click", aumentar,"false");
+document.getElementById("disminuye2").addEventListener("click", disminuye,"false");
+document.getElementById("aumenta3").addEventListener("click", aumentar,"false");
+document.getElementById("disminuye3").addEventListener("click", disminuye,"false");*/
+
+var botones = document.querySelectorAll("input");
+for (var i = 0; i < botones.length; i++) {
+	botones[i].addEventListener("click", aumentar,"false");
+	botones[i].addEventListener("click", disminuye,"false");
+}
+
+});
+
+function aumentar(evento){
+var zonaActuacion;
+
+if (evento.target==aumenta1)
+	{zonaActuacion="#noticia1";
+	}else if  (evento.target==aumenta2)
+	{zonaActuacion="#noticia2";
+	}else if (evento.target==aumenta3)
+	{zonaActuacion="#noticia3";
+	}
+	
+ var tamañoFuente = $(zonaActuacion).css("font-size");
+//alert(tamañoFuente);
+
+ tamañoFuente= parseFloat(tamañoFuente);//lo pasamos a valor numerico del string
+ $(zonaActuacion).css("font-size",tamañoFuente*1.05);
+
+}
+function disminuye(evento){
+
+	var zonaActuacion;
+
+	if (evento.target==disminuye1)
+		{zonaActuacion="#noticia1";
+		}else if  (evento.target==disminuye2)
+		{zonaActuacion="#noticia2";
+		}else if (evento.target==disminuye3)
+		{zonaActuacion="#noticia3";
+		}
+		
+	 var tamañoFuente = $(zonaActuacion).css("font-size");
+	//alert(tamañoFuente);
+
+	 tamañoFuente= parseFloat(tamañoFuente);//lo pasamos a valor numerico del string
+	 $(zonaActuacion).css("font-size",tamañoFuente*0.95);
+
+	}
+
+</script>
+</head>
+
+<body>
+
+<h1>NOTICIAS</h1>
+<div id="noticia1">"Paul Wight, más conocido en el mundo de la lucha libre como The Big Show, reconoce que el momento de la retirada le está resultando duro. Su adiós a los cuadriláteros y al espectáculo itinerante de la WWE no tiene nada que ver con el retrato patético del luchador terminal que retrató Darren Aronofsky en su película The wrestler (2008), protagonizada por Mickey Rourke, pero aún así siempre es difícil decir adiós. "Mi cuerpo va envejeciendo, pero mi mente es joven. Me gusta viajar y estar con el público. Pero son 25 años de profesional y eso también te casa". Admite que está todavía "un poco aquí y un poco allá", en referencia a sus apariciones puntuales en una gala de Wrestlemania, donde a veces se lía a repartir hostias como panes. Pero a la vez sabe que, a los 48 años, ha llegado el momento de ceder el testigo.
+
+Él lo recogió de la generación de luchadores que popularizó el wrestling hasta bien entrada la década de los 90. Su padrino fue Hulk Hogan, que le vio en la puerta de un club en el que estaba de gorila y no pudo más que admirarse de sus casi dos metros veinte de mole carnosa. Así entró en un circuito que había disfrutado de pre-adolescente -"yo soy de la generación que asistió al auge de The Undertaker", cuenta The Big Show, en referencia al gran villano que tomó el testigo de El último guerrero cuando éste se pasó al bando de los buenos-, y que dominó como adulto ciñéndose el cinturón de campeón de la WWE en varias ocasiones.
+
+"He tenido piques alucinantes con los mejores", prosigue The Big Show. "He peleado con Randy Savage, con John Cena, con The Undertaker, con Ric Flair... Algunos eran mis ídolos, luego fueron mis rivales, y ahora son mi familia. Entrar en la WWE fue como si a un niño le abrías las puertas de una tienda de caramelos. Lo he pasado genial". A pesar de sus condiciones físicas ideales para la lucha libre espectáculo de la WWE -corregidas por suerte gracias a la cirugía; de niño se le diagnosticó gigantismo, un trastorno del crecimiento que pudo frenar antes de que le convirtiera en un joven deforme-, él nunca lo vio como una salida profesional. En la universidad lo intentó con el fútbol americano y con el baloncesto, pero no servía para eso.
+
+"Era malísimo en el baloncesto", detalla. "Y nunca vi el wrestling como una posibilidad. Una vez dentro, comprobé que era para mí: no sólo te permite mejorar tus condiciones atléticas, sino que hay mucho talento en el desarrollo de personajes e historias. Me encantan los giros sorprendentes, cuando uno pasa de ser el héroe al villano". The Big Show ha sido famoso por haber dado esos bandazos en numerosas ocasiones. El público pasaba de amarlo a tenerle un odio cerval. "John Cena y yo hemos marcado una época, y cubrimos el hueco que había dejado la antigua generación". Y quien venga después, le deberá mucho a estos titanes del espectáculo."<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta1"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye1"></td></tr></table></div>
+
+<div id="noticia2">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta2"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye2"></td></tr></table></div>
+
+<div id="noticia3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"<table><tr><td style="text-align:left"><input type="button" value="Aumentar" id="aumenta3"></td><td style="text-align:right"><input type="button" value="Disminuir" id="disminuye3"></td></tr></table></div>
+</body>
+</html>

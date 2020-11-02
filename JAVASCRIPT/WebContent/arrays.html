@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="css/micss.css">
+<script>
+
+//dos formas de crear arrays
+//var articulos=["medias", "pantyhose", "liguero", "falda"]; 
+ 
+var articulos = new Array ("medias", "pantihose", "liguero", "falda2");
+articulos.push("david");
+var cadena = articulos.join(" -- ");
+var num = new Array (6,3,9,4,2);
+num.reverse();
+
+//var arrayVacio =[];
+	
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+
+     articulos.sort();
+ 	 document.write("<p> El primer articulo es  <strong>");
+ 	 document.write(articulos[3] + "</strong></p>");
+
+ 	 document.write(articulos);
+ 	document.write("<br/>");
+ 	 document.write(num);
+ 	 //alert(articulos.length);
+
+		
+		
+		
+		
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>

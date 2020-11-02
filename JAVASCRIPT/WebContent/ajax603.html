@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Curso de Javascript - 6.03. AJAX. Acceso a archivos XML
+</title>
+
+<!-- Carga de fichero xml externo pulsando un boton -->
+    <meta charset="utf-8" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="texto">
+        <h1>Colección de CDs</h1>
+        <button id="cargaCatalogo">Carga catálogo</button>
+    </div>
+    <table id="demo"></table>
+
+    <script>
+    //asociamos un evento al boton
+    document.getElementById("cargaCatalogo").addEventListener("click", cargarCatalogo);
+
+    function cargarCatalogo(){   //CREA el objeto y dice q f se va a ejecutar en cada uno de los cambios
+
+    	var xhr = XMLHttpRequest();  //creamos el objeto q es reconocido por la mayoria de los navegadores
+    	xhr.onreadystatechange=function(){  //la definimos anónima 
+    		//alert(xhr.readyState);
+    		//alert(xhr.status);
+    	//cd vez q cambie el estado se va a ejecutar esta funcion anonima
+    	
+    		switch(this.readyState){
+    	     case 4:
+    	      if (this.status == 200)
+    	       cargarXML(this);
+    	      break;
+    	     case 2:
+    	      if (this.status == 200)
+    	       alert("Recibido");
+    	      break;
+    	     case 3:
+    	      if (this.status == 200)
+    	       alert("Enviando");
+    	      break;
+    	}
+    	
+    	
+    			if (this.readyState==4 && this.status == 200 ) {
+    					cargarXML(this);}
+    			};
+    		//metodo open p especificar la solicitud; get: envia por la barra del navegador y + rapido q post
+    		xhr.open("GET","catalogo.xml",true);   //true es asincrono, false será sincrono no continua hasta q la respuesta
+    											//esté lista
+    		//send envia al servidor. Con get no pasamos más parametros.
+    		//pr Si utilizamos POST pasamos los datos por parametros q irían entre ()
+    		xhr.send();
+
+    }
+	
+    
+    	
+    	function cargarXML(xml){  //capturamos la respuesta de la solcicitud
+    		var docXML= xml.responseXML;
+			var tabla="<tr><th>Artista</th><th>titulo</th></tr>";
+			var discos = docXML.getElementsByTagName("CD");  //extraemos un array 
+			for (var i = 0; i < discos.length; i++) {
+				tabla+="<tr><td>"
+				tabla+=discos[i].getElementsByTagName("ARTIST")[0].textContent;
+				tabla+="</td><td>"
+					tabla+=discos[i].getElementsByTagName("TITLE")[0].textContent;
+				tabla+="</td></tr>"
+			}
+    		document.getElementById("demo").innerHTML =tabla;
+    		};
+    
+    
+    
+    </script>
+
+</body>
+
+</html>

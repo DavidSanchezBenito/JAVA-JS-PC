@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<style type="text/css">
+#contenedor1 {
+	position: absolute;
+	left: 67px;
+	top: 177px;
+	width: 408px;
+	height: 298px;
+	z-index: 1;
+}
+#contenedor2 {
+	position: absolute;
+	left: 510px;
+	top: 176px;
+	width: 443px;
+	height: 297px;
+	z-index: 2;
+}
+
+ul{
+	list-style:none;
+	
+}
+li{
+	margin:10px 0;
+	font-size:24px;
+	width:95px;
+}
+
+.destacar{
+	background-color:#F00;
+	color:#FFF;
+}
+</style>
+
+<script src="jquery-3.5.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+// 	var elementos=document.querySelectorAll("li");
+	
+// 	for (var i = 0; i < elementos.length; i++) {
+		
+// 		elementos[i].addEventListener("onmouseover", pon_imagen,false);
+// 		elementos[i].addEventListener("onmouseout", quita_imagen,false);
+		
+// 	}
+	
+// });
+
+document.getElementById("elem1").addEventListener("mouseover", prueba,false);
+
+
+function prueba(){
+	//$("img").attr("src","imgs/foto.png");
+	alert("funciona");
+}
+
+function pon_imagen(e){
+	if (e.target==elemen1) {
+		$("#elemen1").addclass("destacar");
+		alert("funciona");
+		//$("img").attr("src","imgs/d1.jpg");
+	}
+
+	if (e.target == elemen1) {
+		$("#elemen2").addclass("destacar");
+		$("img").attr("src","imgs/2.jpg");
+	}
+
+	if (e.target == elemen1) {
+		$("#elemen3").addclass("destacar");
+		$("img").attr("src","imgs/3.jpg");
+	}
+
+	if (e.target == elemen1) {
+		$("#elemen4").addclass("destacar");
+		$("img").attr("src","imgs/f4.jpg");
+	}
+}
+function quita_imagen(e){
+// 	if (e.target == elemen1) {
+// 		$("#elemen1").removeclass("destacar");
+// 		$("img").removeAttr("src");
+// 	}
+// 	if (e.target == elemen2) {
+// 		$("#elemen1").removeclass("destacar");
+// 		$("img").removeAttr("src");
+// 	}
+// 	if (e.target == elemen3) {
+// 		$("#elemen1").removeclass("destacar");
+// 		$("img").removeAttr("src");
+// 	}
+// 	if (e.target == elemen4) {
+// 		$("#elemen1").removeclass("destacar");
+// 		$("img").removeAttr("src");
+// 	}
+
+}
+
+
+	
+</script>
+
+</head>
+
+<body>
+<div id="contenedor1">
+
+<ul>
+
+<li id="elem1">Imagen 1</li>
+<li id="elem2">Imagen 2</li>
+<li id="elem3">Imagen 3</li>
+<li id="elem4">Imagen 4</li>
+
+</ul>
+</div>
+<div id="contenedor2">
+<img src="">
+</div>
+
+</body>
+</html>/html>

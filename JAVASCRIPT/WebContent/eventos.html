@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Curso de Javascript - 4.05. Obtención de información de un evento</title>
+</head>
+<body>
+
+<H1 ID="eventos">Obtener info de un evento</H1>
+<h2 id="parrafo1">parrafo 1</h2>
+<h2 id="parrafo2">parrafo 2</h2>
+
+<script>
+ document.getElementById("eventos").addEventListener("mouseover", manejador);
+ document.getElementById("eventos").addEventListener("mouseout", manejador);
+ document.getElementById("parrafo1").addEventListener("click", saludo);
+ document.getElementById("parrafo2").addEventListener("click", saludo);
+ 
+ function manejador(e){
+
+	//if(!e) e = window.event;
+	
+		switch (e.type){
+
+	case "mouseover": this.style.color="red";
+		break;
+	case "mouseout": this.style.color="yellow";
+	break;
+	
+	}
+
+	 }
+ 	
+ function saludo(e){
+
+	 if (e.target.id== "parrafo1") alert ("pulsado parrafo1");
+	 else if  (e.target.id== "parrafo2") alert ("pulsado parrafo2");
+
+	 alert ("has pulsado " + e.target.id);
+			 
+
+	 }
+
+ 
+
+
+</script>
+
+ </body>
+</html>

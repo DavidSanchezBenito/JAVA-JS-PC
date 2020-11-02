@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Curso de Javascript - 6.02. AJAX. Acceso a archivos de texto</title>
+<!-- https://www.w3schools.com/xml/ajax_xmlhttprequest_send.asp -->
+
+</head>
+<body>
+<div id="texto">
+	<h1>AJAX</h1>
+	<button id="cambiaContenido">Cambia el contenido</button>
+</div>
+
+<script type="text/javascript">
+document.getElementById("cambiaContenido").addEventListener("click", cambiaContenido);
+
+function cambiaContenido(){   //CREA el objeto y dice q f se va a ejecutar en cada uno de los cambios
+
+	var xhr = XMLHttpRequest();  //creamos el objeto
+	xhr.onreadystatechange=function(){
+		//alert(xhr.readyState);
+		//alert(xhr.status);
+	//cd vez q cambie el estado se va a ejecutar esta funcion anonima
+		if (this.readyState==4 && this.status == 200 ) {
+			document.getElementById("texto").innerHTML=this.responseText;
+		}
+		};
+		//metodo open p especificar la solicitud; get: envia por la barra del navegador y + rapido q post
+		xhr.open("GET","hola.txt",true);   //true es asincrono, false será sincrono no continua hasta q la respuesta
+											//esté lista
+		//send envia al servidor. Si utilizamos POST pasamos los datos por parametros q irían entre ()
+		xhr.send();
+}
+
+</script>
+
+</body>
+</html>

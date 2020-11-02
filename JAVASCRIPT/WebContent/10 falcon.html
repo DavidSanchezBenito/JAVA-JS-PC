@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="">
+	<input type="text" id="num1">
+	<input type="text" id="num2">
+	<input type="button" value="sumar" onclick="alert(suma());">
+	</form>
+	
+	<script>
+	var suma = function(num1, num2){
+		var num1= parseFloat(document.getElementById("num1").value);
+		var num2= parseFloat (document.getElementById("num2").value);
+		var result = num1 + num2;
+		return result;
+		} 
+
+	</script> 
+
+
+</body>
+</html>

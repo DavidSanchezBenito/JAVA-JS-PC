@@ -1,0 +1,19 @@
+	<div class="container-fluid bg-primary py-5">
+		<div class="container text-white">
+			<h1 class="display-3">
+				<b>Layout		</h1>			</b>
+			<p class="lead">Components and options for laying out your
+				Bootstrap project, including wrapping containers, a powerful grid
+				system, a flexible media object, and responsive utility classes.</p>
+		</div>
+	</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-4 bg-primary">
+				<p>col-4</p>
+		</div>
+	</div>
+
+</div>

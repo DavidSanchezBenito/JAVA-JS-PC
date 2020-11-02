@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style">
+  <notation:Diagram xmi:id="_zRN1gMKdEeqnS8twuJ-2dQ" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+    <children xsi:type="notation:Shape" xmi:id="_zRN1gcKdEeqnS8twuJ-2dQ" type="Interaction_Shape">
+      <children xsi:type="notation:DecorationNode" xmi:id="_zRN1gsKdEeqnS8twuJ-2dQ" type="Interaction_NameLabel"/>
+      <children xsi:type="notation:BasicCompartment" xmi:id="_zRN1g8KdEeqnS8twuJ-2dQ" type="Interaction_SubfragmentCompartment">
+        <layoutConstraint xsi:type="notation:Bounds" xmi:id="_zRN1hMKdEeqnS8twuJ-2dQ"/>
+      </children>
+      <element href="proyectoPapyrus.uml#_zQHCQMKdEeqnS8twuJ-2dQ"/>
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_zRN1hcKdEeqnS8twuJ-2dQ"/>
+    </children>
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_zRN1hsKdEeqnS8twuJ-2dQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_zRN1h8KdEeqnS8twuJ-2dQ"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_zRN1iMKdEeqnS8twuJ-2dQ" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+      <owner href="proyectoPapyrus.uml#_zOOL4MKdEeqnS8twuJ-2dQ"/>
+    </styles>
+    <element href="proyectoPapyrus.uml#_zQHCQMKdEeqnS8twuJ-2dQ"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_zRfiUMKdEeqnS8twuJ-2dQ" type="PapyrusUMLClassDiagram" name="Class Diagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_zRfiUcKdEeqnS8twuJ-2dQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_zRfiUsKdEeqnS8twuJ-2dQ"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_zRfiU8KdEeqnS8twuJ-2dQ" diagramKindId="org.eclipse.papyrus.uml.diagram.class">
+      <owner href="proyectoPapyrus.uml#_zOOL4MKdEeqnS8twuJ-2dQ"/>
+    </styles>
+    <element href="proyectoPapyrus.uml#_zOOL4MKdEeqnS8twuJ-2dQ"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_zRlB4MKdEeqnS8twuJ-2dQ" type="UseCase" name="Use Case Diagram" measurementUnit="Pixel">
+    <styles xsi:type="notation:StringValueStyle" xmi:id="_zRlB4cKdEeqnS8twuJ-2dQ" name="diagram_compatibility_version" stringValue="1.4.0"/>
+    <styles xsi:type="notation:DiagramStyle" xmi:id="_zRlB4sKdEeqnS8twuJ-2dQ"/>
+    <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_zRlB48KdEeqnS8twuJ-2dQ" diagramKindId="org.eclipse.papyrus.uml.diagram.useCase">
+      <owner href="proyectoPapyrus.uml#_zOOL4MKdEeqnS8twuJ-2dQ"/>
+    </styles>
+    <element href="proyectoPapyrus.uml#_zOOL4MKdEeqnS8twuJ-2dQ"/>
+  </notation:Diagram>
+</xmi:XMI>

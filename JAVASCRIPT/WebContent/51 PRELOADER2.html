@@ -1,0 +1,102 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> Preloader 2</title>
+<style>
+
+table{
+	text-align:center;
+	width:50%;
+	border:none;
+	margin:auto;
+}
+
+img{
+	padding:0 5px;
+}
+h1{
+	text-align:center;
+}
+
+</style>
+<script src="jquery-3.5.1.min.js"></script>
+
+<script>
+
+	$(document).ready(function() {
+
+		//utilizamos precarga para asegurarnos que las imagenes esten cargadas
+	var foto_hover=["imgs/f4.jpg","imgs/f4.jpg", "imgs/f4.jpg","imgs/f4.jpg"]; //creo array con todos los src
+	var imagenes=[];
+
+	//relleno un array con las rutas
+	for (var i = 0; i < foto_hover.length; i++) {
+		imagenes[i]=new Image();
+		imagenes[i].src=foto_hover[i];
+//document.write("<p>" + imagenes[i].src + "</p>");
+	}
+						
+		$("img").each(function() {
+			
+			$(this).hover(cambiar , restaurar);
+            
+        });
+        	
+	function cambiar(e){
+		//cambiar el atributo de la imagen
+		
+	if (e.target==img1) {
+		$("#img1").attr("src",imagenes[0].src);
+		
+	}else if(e.target==img2) {
+		$("#img2").attr("src",imagenes[1].src);
+		
+	}else if(e.target==img3) {
+		$("#img3").attr("src",imagenes[2].src);
+		
+	}else if(e.target==img4) {
+		$("#img4").attr("src",imagenes[3].src);
+		
+	}
+	
+	
+	}
+	
+	function restaurar(e){
+	//	alert("fuera");
+		if (e.target==img1) {
+			
+			$("#img1").attr("src","imgs/d1.jpg");
+			
+		}else if(e.target==img2) {
+			$("#img2").attr("src","imgs/2.jpg");
+			
+		}else if(e.target==img3) {
+			$("#img3").attr("src","imgs/f5.jpg");
+			
+		}else if(e.target==img4) {
+			$("#img4").attr("src","imgs/f6.jpg");
+			
+		}
+		
+			
+	}
+  });
+</script>
+</head>
+
+<body>
+
+<h1>Galería de imágenes</h1>
+<table width="100%" border="0">
+  <tr>
+    <td><img src="imgs/d1.jpg" id="img1" width=270px ></td>
+    <td><img src="imgs/2.jpg" id="img2" ></td>
+    <td><img src="imgs/f5.jpg" id="img3" ></td>
+    <td><img src="imgs/f6.jpg" id="img4" ></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PRELOADER 1</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+		
+		   var foto_nueva= new Image();
+
+		   foto_nueva.src="imgs/f6.jpg";  //lo cargamos antes de q el usuario pase el raton
+		
+		$("#foto").hover(function(){
+			
+			$(this).attr("src",foto_nueva.src);
+			
+		},
+		function(){
+			
+			$(this).attr("src","imgs/f5.jpg");
+			
+			
+		});	
+		
+    });
+
+
+</script>
+</head>
+
+<body>
+
+<img src="imgs/imgs2/1.jpg" width="200" height="3 00" id="foto">
+</body>
+</html>

@@ -1,0 +1,4 @@
+calculadora:
+incorporar cookies para almacenar nombre de usuario
+
+En el servlet se comprueba q no hay cookie

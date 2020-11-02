@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Curso de Javascript - 7.06. JQuery. Traversing I: recorrido de elementos</title>
+<script src="jquery-3.5.1.min.js"></script>
+
+<style>
+.ancestors *{
+display:block;
+border: 2px solid lightgrey;
+padding: 5px;
+margin: 15 px;
+}
+</style>
+<script>
+$(document).ready(inicio);
+
+function inicio(){
+	//ascendientes
+	//$("span").parent().css("border","2px solid blue");
+	//$("span").parents().css("border","2px solid blue");
+	//$("span").parentsUntil("div").css("border","2px solid blue");
+	//$("span").closest("ul").css("border","2px solid blue");
+	
+	//descendientes
+	//$("li").children().css("border","2px solid red");
+	//$("li").children("i.cur").css("border","2px solid red");
+	//$("div").find("b").css("border","2px solid red");
+
+	//hermanos
+	//$("i").siblings().css("border","2px solid green");
+	//$("i").next().css("border","2px solid green");   //el siguiente
+	//$("i").prev().css("border","2px solid green");   //el anteiror
+	//$("span").nextUntil("b").css("border","2px solid green");   //el anteiror	
+
+	//filtrado has, not, first, last , eq
+	//añadir elementos a una seleccion
+		//.add(lo q queramos)
+
+		//a los span y los b les aplica este estilo, NO CREA ELEMENTOS
+	$("span").add("b").css("border","4px solid orange");
+}
+
+
+
+</script>
+
+
+</head>
+<body class="ancestors">body (tatarabuelo)
+	<div style="width:500px;">div (bisabuelo)
+		<ul>ul (abuelo)
+			<li>li (padre)
+				<span>span</span> <i class="cur">cursiva</i> <b>negrita</b><u>subrayado</u>
+			</li>
+		
+		</ul>
+
+	</div>
+</body>
+</html>

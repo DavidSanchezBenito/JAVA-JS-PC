@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+var repetir="si";
+
+function suma(num1,num2){
+	alert("la suma es: " + (num1 + num2 ));
+}
+function resta(num1,num2){
+	alert("la resta es: " + (num1 - num2 ));
+}
+function multiplicacion(num1,num2){
+	alert("la multiplicacion es: " + (num1 * num2 ));
+}
+function dividir(num1,num2){
+	alert("la dividir es: " + (num1 / num2 ));
+}
+do{
+var operacion= prompt("que operacion desea realizar?");
+var operador1 = prompt("introduce el primer numero");
+var operador2 = prompt("introduce el segundo numero");
+
+if (operacion =="s"){
+ suma(parseInt(operador1), parseInt(operador2));
+}
+else if (operacion =="m"){
+	multiplicacion(parseInt(operador1), parseInt(operador2));
+	}
+else if (operacion =="r"){
+	resta(parseInt(operador1), parseInt(operador2));
+	}
+else if (operacion =="d"){
+	dividir(parseInt(operador1), parseInt(operador2));
+	}
+else{
+	alert("operacion no contemplada");
+}
+repetir= prompt("desea repetir?? si/no")
+}while (repetir=="si"){
+
+
+	
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

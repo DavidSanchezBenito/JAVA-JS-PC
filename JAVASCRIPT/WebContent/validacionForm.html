@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VALIDACION DE FORMULARIOS CON HTML5   4.08</title>
+        <script src="js/validationform2.js"></script>
+    
+    <style>
+        .error {
+            border: solid 2px #FF0000;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Formulario</h1>
+    <form action="procesar.php" method="post" id="miFormulario">
+        <table>
+            <tr>
+                <td>Nombre*: </td>
+                <td>
+<!--                     <input type="text" name="nombre" id="nombre" maxlength="5" pattern="[A-Za-z]{2-5}" title="formato incorrecto" required/> -->
+                  <input type="text" name="nombre" id="nombre" maxlength="15" pattern="[A-Za-z]{2,15}" title="Introduce entre 2 y 15 letras" required/>
+                </td> 
+            </tr>
+            <tr>
+                <td>Edad*: </td>
+                <td>
+                    <input type="number" name="edad" id="edad" min="16" max="30" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Telefono*: </td>
+                <td>
+                    <input type="text" name="telefono" id="telefono" pattern="[0-3]{3}" title="Numero de 3 cifras" required/>
+                </td>
+            </tr>
+        </table>
+        <p id="mensajeError"></p>
+        <p>
+            <input type="submit" value="Enviar" id="enviar" />
+            <input type="reset" value="Borrar" id="borrar" />
+        </p>
+    </form>
+</body>
+
+
+</html>

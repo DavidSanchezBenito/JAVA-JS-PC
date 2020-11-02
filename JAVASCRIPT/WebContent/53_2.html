@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Curso JavaScript desde 0. Ventanas emergentes e Iframes II. Vídeo 54</title>
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+		
+	var propVentana = "width=600, height=400, left=200, top=300, toolbars=no";
+
+
+	var miVentana =open ("http://www.pildorasinformaticas.es","nombreInterno1",propVentana);
+	//open ("http://www.pildorasinformaticas.es","nombreInterno2","width=600, height=400, left=400, top=300, toolbars=no");
+	//open ("http://www.pildorasinformaticas.es","nombreInterno3","width=600, height=400, left=600, top=300, toolbars=no");
+
+	
+	$("#botonCerrar").click(function(e){
+		e.preventDefault();  //a mi me la cerraba sin poner esta instruccion
+		miVentana.close();
+	});
+});
+
+
+	
+
+</script>
+</head>
+
+<body>
+<a href="http://www.pildorasinformaticas.es">Ir a Píldoras</a>
+<br><br><br>
+<a href="#" id="botonCerrar">Cerrar</a>
+</body>
+</html>

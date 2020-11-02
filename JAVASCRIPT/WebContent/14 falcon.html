@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+	
+
+	<title>DOM Document Object Model</title>
+
+	
+
+	<meta charset="utf-8" />
+
+	
+
+</head>
+
+<body>
+<ol id="a">
+	<li id="primero"> primera linea</li>
+	<li> segunda linea</li>
+<li> 3 linea</li>
+<li> 4 linea</li>
+</ol>
+
+
+	<script>
+// 	var primerE = document.getElementById("primero");
+// 	primerE.textContent ="nuevo texto 2020 <i>David </i>";
+
+	
+var elemento = document.createElement("li") ,
+contenido = document.createTextNode("esta es la tercera línea creada con JS");
+elemento.appendChild(contenido);
+document.getElementById("primero").appendChild(elemento);
+
+//parentNode nos devuelve el padre
+//var padre = document.getElementsByTagName("li")[0].parentNode,  
+//primerE = document.getElementsByTagName("li")[2];
+//padre.insertBefore(elemento, primerE);
+//padre.appendChild(elemento);
+
+
+
+// var elemento = document.createElement("h1");
+// var contenido = document.createTextNode("este es nuestro titular CREADO");
+// elemento.appendChild(contenido);
+// elemento.setAttribute("align", "center");
+// document.getElementById("s").appendChild(elemento);
+		
+
+	</script>
+
+
+
+</body>
+
+</html>

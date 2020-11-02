@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Leyendo y cambiando atributos</title>
+<script src="jquery-3.5.1.min.js"></script>
+
+<style type="text/css">
+.destacar{
+	background-color:#F00;
+	color:#FFF;
+}
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+document.getElementById("img1").addEventListener("mouseover", cambiarfoto,false);
+document.getElementById("img1").addEventListener("mouseout", cambiarfoto1,false);
+
+
+document.getElementById("elem1").addEventListener("mouseover", cambiarformato,false);
+
+});
+
+function cambiarformato(){
+
+		$("elem1").addclass("destacar");
+		alert("funciona");
+
+	}
+
+function cambiarfoto(){
+	$("img").attr("src","imgs/foto.png");
+	
+}
+
+function cambiarfoto1(){
+	$("img").attr("src","imgs/rubia.jpg");
+}
+
+</script>
+
+</head>
+<body>  
+<div id="contenedor1">
+
+<ul>
+
+<li id="elem1">Imagen 1</li>
+<li id="elem2">Imagen 2</li>
+<li id="elem3">Imagen 3</li>
+<li id="elem4">Imagen 4</li>
+
+</ul>
+</div>
+
+<!-- esta es la foto que tenemos por defecto -->
+<img src="imgs/3.jpg" id="img1" width=25%>
+
+</body>
+</html>

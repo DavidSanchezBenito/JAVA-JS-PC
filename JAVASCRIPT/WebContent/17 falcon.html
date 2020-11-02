@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+div {
+	width: 200px;
+	height: 200px;
+	backgound: #dddddd;
+	display: inline-block;
+	margin-right: 50px;
+	border: 5px solid #AAAAAA;
+
+	}
+	.azul {
+	background: #0074D9;
+	border: 5px solid #AAAAAA;
+	}
+	
+	.red {
+	background: #FF4136;
+	border: 5px solid #AAAAAA;
+	}
+	
+
+</style>
+
+</head>
+<body>
+<section id="contenedor">
+	<a href="https://www.dim.es/" id="enlace">Enlace a Dim</a>
+	<div class=""> 	</div>
+	<div class=""> 	</div>
+</section>
+<script>
+var elemento= document.createElement("div");
+var padre =document.getElementById("contenedor");
+var referencia = document.getElementsByTagName("div")[2]; 
+padre.insertBefore(elemento, referencia)
+
+elemento.setAttribute("class", "red")
+//elemento.setAttribute("id", "prueba")
+
+//document.body.appendChild(elemento);
+
+</script>
+
+
+</body>
+</html>

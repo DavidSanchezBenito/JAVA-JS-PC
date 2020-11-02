@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+(function(){
+	var fecha = new Date();
+	document.write(fecha);
+	var hora = fecha.getHours()-12;
+	var minutos = fecha.getMinutes();
+	var seg = fecha.getSeconds();
+
+	console.log("horas " + hora);
+	console.log("min" + minutos);
+	console.log("seg" + seg);
+	console.log(fecha.getDay());
+	console.log(fecha.getDate());
+	console.log(fecha.getMonth());
+	console.log(fecha.getFullYear());
+}())
+</script>
+</body>
+</html>

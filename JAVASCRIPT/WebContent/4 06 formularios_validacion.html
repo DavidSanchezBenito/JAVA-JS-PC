@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Curso de Javascript - 4.06. Validación básica de formularios con Javascript</title>
+<script src="js/validacion2.js"></script>
+    <style>
+        .error {
+            border: solid 2px #FF0000;
+        }
+    </style>
+
+</head>
+
+<body>
+<h1>Formulario</h1> 
+<form action="" method="post" id="miformulario">
+	<table>
+		<tr>
+			<td>Nombre: </td>
+			<td><input type="text" name="nombre" id="nombre" ></td>
+		</tr>
+		<tr>
+			<td>Telefono: </td>
+			<td> <input type="text" name="telefono" id="telefono"></td>
+		</tr>
+		<tr>
+			<td>FeCha de nacimiento: </td>
+			<td> <input type="text" name="dia" id="dia" size="2">
+			 <input type="text" name="mes" id="mes" size="2">
+			 <input type="text" name="año" id="ano" size="4"></td>
+		
+		</tr>
+		<tr>
+			<td>Sexo</td>
+			<td><input type="radio" name="sexo" value="hombre">Hombre
+			<input type="radio" name="sexo" value="mujer" checked >Mujer</td>
+		</tr>
+		<tr>
+			<td>mayor de 18</td>
+			<td><input type="checkbox" id="mayor" checked >
+		</tr>
+	</table>
+
+<input type="submit" value="enviar"  id="enviar">
+<input type="reset" value="Borrar" id="borrar" />
+
+</form>
+
+
+
+<br/><br/>
+<img src="https://picsum.photos/400?random">
+
+
+
+
+
+
+</body>
+</html>
